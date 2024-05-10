@@ -49,6 +49,7 @@
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include <mpi.h>
 
@@ -126,6 +127,7 @@ int main(int argc, char* argv[]) {
 
 	// 6. Each process can sum its own segment!
 	long cost_per_menu_item[ITEMS_ON_MENU] = {0};
+    long total_cost_per_menu_item[ITEMS_ON_MENU] = {0}; // Add this line to declare the array
 	for (int i = 0; i < segment_size; i++) {
 		int item = segment_items[i];
 		int qty = segment_quantities[i];
