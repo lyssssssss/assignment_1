@@ -252,4 +252,3 @@ static int parse_order(int ** restrict item, int ** restrict quantity) {
     *quantity = all_quantities;
     return size_of_order;
 }
-
